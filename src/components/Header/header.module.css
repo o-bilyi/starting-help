@@ -30,6 +30,19 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 40px;
+  transition: all 0.3s ease-out;
+}
+
+.contactUs:hover {
+  color: #e1f0ff;
+  background-color: #477fb5;
+}
+.contactUs:hover .emailIcon path{
+  fill: #fff;
+}
+
+.emailIcon path {
+  transition: all 0.3s ease-out;
 }
 
 .socialLink {
@@ -40,6 +53,16 @@
   align-items: center;
   background: #e1f0ff;
   justify-content: center;
+  transition: all 0.3s ease-out;
+}
+.socialLink:hover {
+  background: #477fb5;
+}
+.socialLink:hover .socialIcon path {
+  fill: #fff;
+}
+.socialIcon path {
+  transition: all 0.3s ease-out;
 }
 
 .socialLink:not(:last-child) {

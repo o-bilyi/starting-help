@@ -1,3 +1,24 @@
 .photoReport {
-  background-color: rebeccapurple;
+  padding-top: 100px;
+  background-color: #ecf6ff;
+}
+.widthContainer {
+  margin: auto;
+  padding: 0 10px;
+  max-width: 1440px;
+}
+.title {
+  font-size: 32px;
+  color: #263640;
+  font-weight: 700;
+  line-height: 44px;
+  margin-bottom: 16px;
+}
+.description {
+  font-size: 16px;
+  color: #333333;
+  font-weight: 300;
+  line-height: 28px;
+  max-width: 482px;
+  margin-bottom: 94px;
 }

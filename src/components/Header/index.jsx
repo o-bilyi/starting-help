@@ -20,11 +20,11 @@ export const Header = () => (
     </div>
     <div className={styles.rightBlock}>
       <Link to={socialLinks.facebook} className={styles.socialLink}>
-        <FBIconSVG />
+        <FBIconSVG className={styles.socialIcon} />
       </Link>
 
       <Link to={socialLinks.instagram} className={styles.socialLink}>
-        <InstagramIconSVG />
+        <InstagramIconSVG className={styles.socialIcon} />
       </Link>
 
       <AnchorLink
@@ -34,7 +34,7 @@ export const Header = () => (
         title="Звязатись"
       >
         Звязатись
-        <EmailIconSVG />
+        <EmailIconSVG className={styles.emailIcon} />
       </AnchorLink>
     </div>
   </header>

@@ -1,0 +1,28 @@
+.weGladToHearYou {
+  padding-top: 162px;
+  min-height: 750px;
+  background: #fff url(../../../images/footer-bg.jpg) no-repeat right bottom;
+}
+.widthContainer {
+  width: 100%;
+  margin: auto;
+  max-width: 1440px;
+}
+.subTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: #929A9F;
+  line-height: 20px;
+  text-align: center;
+  margin-bottom: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #263640;
+  line-height: 52px;
+  text-align: center;
+  margin-bottom: 64px;
+}

@@ -10,7 +10,6 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-
 }
 .subTitle {
   font-weight: 700;
@@ -49,18 +48,30 @@
   margin-right: 16px;
   background: #477fb5;
 }
-.getHelp {
-  color: #477FB5;
+.help:hover {
+  color: #477fb5;
   background: #e1f0ff;
+}
+.help:hover path {
+  fill: #477fb5;
+}
+.getHelp {
+  color: #477fb5;
+  background: #e1f0ff;
+}
+.getHelp:hover {
+  color: #e1f0ff;
+  background-color: #477fb5;
 }
 .help,
 .getHelp {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 8px;
   height: 40px;
+  display: flex;
   padding: 0px 24px;
   border-radius: 2px;
+  align-items: center;
   text-decoration: none;
+  justify-content: center;
+  transition: all 0.3s ease-out;
 }
