@@ -1,0 +1,66 @@
+.firstSection {
+  margin: auto;
+  padding-top: 90px;
+  background: #fff url("../../../images/top_big_bg.png") no-repeat top right;
+  max-width: 1440px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  min-height: 770px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+}
+.subTitle {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #929a9f;
+}
+.title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+}
+.differentColor {
+  color: #477fb5;
+}
+.list {
+  margin-top: 32px;
+  list-style: initial;
+  padding-left: 20px;
+  max-width: 428px;
+  color: #929a9f;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+}
+.list li:not(:last-child) {
+  margin-bottom: 4px;
+}
+.buttons {
+  display: flex;
+  margin-top: 72px;
+  align-items: center;
+}
+.help {
+  color: #fff;
+  margin-right: 16px;
+  background: #477fb5;
+}
+.getHelp {
+  color: #477FB5;
+  background: #e1f0ff;
+}
+.help,
+.getHelp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0px 24px;
+  border-radius: 2px;
+  text-decoration: none;
+}
