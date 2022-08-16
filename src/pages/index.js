@@ -1,6 +1,7 @@
 import * as React from "react"
-import { FirstSection } from "../components/Home/FirstSection";
+import { Footer } from "../components/Footer";
 import { PhotoReport } from "../components/Home/PhotoReport";
+import { FirstSection } from "../components/Home/FirstSection";
 import { WeGladToHearYou } from "../components/Home/WeGladToHearYou";
 
 import Seo from "../components/seo"
@@ -10,6 +11,7 @@ const IndexPage = () => (
     <FirstSection />
     <PhotoReport />
     <WeGladToHearYou />
+    <Footer />
   </React.Fragment>
 )
 

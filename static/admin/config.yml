@@ -1,0 +1,36 @@
+backend:
+  name: git-gateway #test-repo
+  branch: master
+
+media_folder: static/images
+public_folder: /images
+
+collections:
+  - name: "photoReport"
+    label: "Фото звіт"
+    folder: "content/photoReport"
+    create: true
+    slug: "{{day}}-{{month}}-{{year}}"
+    media_folder: ""
+    public_folder: ""
+    path: "{{title}}/index"
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - label: "Список для кого було куплено"
+        name: "listOfItems"
+        widget: "list"
+        fields:
+          - {
+              label: "Title",
+              name: "name",
+              widget: "string",
+              default: "Допомога ...",
+            }
+      - label: "Фотографії"
+        name: "photos"
+        widget: "list"
+        fields:
+          - { label: "Image", name: "img", widget: "image" }

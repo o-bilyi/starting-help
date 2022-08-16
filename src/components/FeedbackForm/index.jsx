@@ -47,7 +47,7 @@ export const FeedbackForm = () => {
     <div className={styles.feedbackForm}>
       <form
         method="post"
-        name="service"
+        name="feedback"
         data-netlify="true"
         onSubmit={handleSubmit}
         className={styles.form}
