@@ -24,8 +24,6 @@ function Seo({ description, title, children }) {
     `
   );
 
-  console.log(site, ' site');
-
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
 

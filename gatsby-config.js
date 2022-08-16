@@ -10,7 +10,6 @@ module.exports = {
   plugins: [
     `gatsby-plugin-anchor-links`,
     `gatsby-plugin-layout`,
-    `gatsby-plugin-offline`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
