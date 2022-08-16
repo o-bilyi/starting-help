@@ -1,19 +1,30 @@
 .footer {
   margin: auto;
+  max-width: 1100px;
   padding: 0 10px 10px;
-  max-width: 1440px;
 }
 .list {
   display: flex;
-  list-style: initial;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
-li {
+.list li {
+  display: flex;
   font-size: 14px;
   color: #333333;
   line-height: 20px;
+  position: relative;
+  align-items: center;
   letter-spacing: 0.5px;
+}
+.list li:not(:last-child)::after {
+  content: "";
+  width: 4px;
+  height: 4px;
+  display: block;
+  margin: 0 20px;
+  border-radius: 8px;
+  background: #333333;
 }
 .link {
   color: #333333;

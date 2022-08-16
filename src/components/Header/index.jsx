@@ -19,11 +19,11 @@ export const Header = () => (
       </Link>
     </div>
     <div className={styles.rightBlock}>
-      <Link to={socialLinks.facebook} className={styles.socialLink}>
+      <Link target="_blank" to={socialLinks.facebook} className={styles.socialLink}>
         <FBIconSVG className={styles.socialIcon} />
       </Link>
 
-      <Link to={socialLinks.instagram} className={styles.socialLink}>
+      <Link target="_blank" to={socialLinks.instagram} className={styles.socialLink}>
         <InstagramIconSVG className={styles.socialIcon} />
       </Link>
 

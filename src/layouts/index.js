@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Footer } from '../components/Footer';
+import { Footer } from '../components/Footer';
 import { Header } from '../components/Header';
 
 import * as styles from './layout.module.css';
@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
     <React.Fragment>
       <Header />
       <main className={styles.main}>{children}</main>
-      {/* <Footer /> */}
+      <Footer />
     </React.Fragment>
   );
 };

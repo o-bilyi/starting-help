@@ -1,23 +1,33 @@
+import { Link } from "gatsby";
 import React from "react";
+import config from "../../../content/meta/config";
 import * as styles from "./footer.module.css";
 
 export const Footer = () => {
   return (
-    <div className={styles.footer}>
+    <footer className={styles.footer}>
       <ul className={styles.list}>
         <li>© 2022 Starting Help</li>
         <li>
-          <a className={styles.link} href="#">
+          <Link
+            target="_blank"
+            className={styles.link}
+            to={config.charterOfCharitableOrganization}
+          >
             Статут благодійної організації
-          </a>
+          </Link>
         </li>
         <li>
-          <a className={styles.link} href="#">
+          <Link
+            target="_blank"
+            className={styles.link}
+            to={config.noteInTheStateRegister}
+          >
             Відмітка в державному реєстрі
-          </a>
+          </Link>
         </li>
         <li>м.Чернівці</li>
       </ul>
-    </div>
+    </footer>
   );
 };

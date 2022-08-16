@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Footer } from "../components/Footer";
 import { PhotoReport } from "../components/Home/PhotoReport";
 import { FirstSection } from "../components/Home/FirstSection";
 import { WeGladToHearYou } from "../components/Home/WeGladToHearYou";
@@ -11,7 +10,6 @@ const IndexPage = () => (
     <FirstSection />
     <PhotoReport />
     <WeGladToHearYou />
-    <Footer />
   </React.Fragment>
 )
 

@@ -66,8 +66,8 @@
   align-items: center;
   justify-content: center;
   transition: background-color 0.3s;
-  background-color: rgb(71 127 181 / 50%);
-}
-.submitButton:hover {
   background-color: rgb(71 127 181 / 100%);
+}
+.submitButton:disabled {
+  background-color: rgb(71 127 181 / 50%);
 }

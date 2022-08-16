@@ -44,7 +44,7 @@ export const FeedbackForm = () => {
   };
 
   return (
-    <div className={styles.feedbackForm}>
+    <div className={styles.feedbackForm} id="form">
       <form
         method="post"
         name="feedback"
@@ -96,7 +96,7 @@ export const FeedbackForm = () => {
             Ваше повідомлення
           </label>
         </div>
-        <button className={styles.submitButton} type="submit">Відправити</button>
+        <button disabled={!Object.keys(formValues).length >= 1} className={styles.submitButton} type="submit">Відправити</button>
       </form>
     </div>
   );
