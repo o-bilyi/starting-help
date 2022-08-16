@@ -16,7 +16,6 @@ module.exports = {
     `gatsby-plugin-robots-txt`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-preload-link-crossorigin`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

@@ -12,7 +12,6 @@
     "gatsby-plugin-manifest": "^4.20.0",
     "gatsby-plugin-offline": "^5.20.0",
     "gatsby-plugin-postcss": "^5.20.0",
-    "gatsby-plugin-preload-link-crossorigin": "^1.0.2",
     "gatsby-plugin-react-svg": "^3.1.0",
     "gatsby-plugin-robots-txt": "^1.7.1",
     "gatsby-plugin-sharp": "^4.20.0",
