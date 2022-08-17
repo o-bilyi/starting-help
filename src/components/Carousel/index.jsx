@@ -49,8 +49,6 @@ export const Carousel = () => {
                 <img className={styles.img} src={Img1} alt="img alt" />
                 <img className={styles.img} src={Img2} alt="img alt" />
                 <img className={styles.img} src={Img3} alt="img alt" />
-              </div>
-              <div className={styles.column}>
                 <img className={styles.img} src={Img4} alt="img alt" />
                 <img className={styles.img} src={Img5} alt="img alt" />
                 <div className={styles.description}>

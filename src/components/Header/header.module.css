@@ -37,7 +37,7 @@
   color: #e1f0ff;
   background-color: #477fb5;
 }
-.contactUs:hover .emailIcon path{
+.contactUs:hover .emailIcon path {
   fill: #fff;
 }
 
@@ -74,4 +74,12 @@
 .rightBlock {
   display: flex;
   align-items: center;
+}
+
+@media (max-width: 480px) {
+  .header {
+    top: 20px;
+    gap: 20px 0;
+    flex-direction: column;
+  }
 }

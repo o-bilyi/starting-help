@@ -29,3 +29,22 @@
 .link {
   color: #333333;
 }
+@media (max-width: 768px) {
+  .list {
+    gap: 10px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .list li {
+    display: list-item;
+  }
+  .list li:not(:last-child)::after {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .list {
+    font-size: 12px;
+    text-align: center;
+  }
+}

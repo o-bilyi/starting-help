@@ -20,7 +20,7 @@
 .title {
   font-weight: 700;
   font-size: 40px;
-  line-height: 52px;
+  line-height: 1.2;
 }
 .differentColor {
   color: #477fb5;
@@ -33,7 +33,7 @@
   color: #929a9f;
   font-weight: 400;
   font-size: 16px;
-  line-height: 32px;
+  line-height: 2;
 }
 .list li:not(:last-child) {
   margin-bottom: 4px;
@@ -74,4 +74,31 @@
   text-decoration: none;
   justify-content: center;
   transition: all 0.3s ease-out;
+}
+@media (max-width: 580px) {
+  .buttons {
+    justify-content: space-between;
+  }
+}
+@media (max-width: 480px) {
+  .firstSection {
+    padding-top: 130px;
+  }
+  .title {
+    font-size: 34px;
+  }
+  .list {
+    font-size: 14px;
+  }
+  .help {
+    margin: 0;
+  }
+  .help,.getHelp {
+    width: 280px;
+  }
+  .buttons {
+    gap: 20px 0;
+    justify-content: center;
+    flex-direction: column;
+  }
 }

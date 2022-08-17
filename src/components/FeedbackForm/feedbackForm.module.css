@@ -1,6 +1,7 @@
 .feedbackForm {
   margin: auto;
   width: 100%;
+  padding: 0 10px;
   max-width: 488px;
 }
 .form {
@@ -74,4 +75,18 @@
 .errorText {
   color: tomato;
   font-size: 12px;
+}
+
+@media (max-width: 480px) {
+  .inputWrap:first-child {
+    margin-right: 0;
+  }
+  .inputWrap {
+    flex-grow: 1;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .textareaWrap {
+    margin-top: 0;
+  }
 }
