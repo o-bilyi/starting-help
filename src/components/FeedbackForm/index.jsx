@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import * as styles from "./feedbackForm.module.css";
+import { useToasts } from "react-toast-notifications";
 
 const encode = (data) => {
   return Object.keys(data)
@@ -7,15 +8,55 @@ const encode = (data) => {
     .join("&");
 };
 
-export const FeedbackForm = () => {
-  const [formValues, setFormValues] = useState({});
+const initialState = {
+  name: "",
+  email: "",
+  description: "",
+  error: {
+    email: null,
+    name: null,
+  },
+};
 
-  const setValue = (event) => {
+const validation = {
+  name: (val) => {
+    if (val.length < 5) {
+      return "Заповність своє Прізвище та імя!";
+    }
+    return null;
+  },
+  email: (val) => {
+    let error = null;
+    const emailValidation = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+    if (!emailValidation.test(val)) {
+      error = "Не корекний E-mail!";
+    }
+    return error;
+  },
+  description: (val) => {
+    if (val.length < 10) {
+      return "Не менше 10 символів!";
+    }
+    return null;
+  },
+};
+
+export const FeedbackForm = () => {
+  const { addToast } = useToasts();
+  const [formValues, setFormValues] = useState(initialState);
+
+  const onFieldChange = (event) => {
+    const errorText = validation[event.target.name](event.target.value);
+
     setFormValues({
-      ...formValues,
       [event.target.name]: event.target.value,
+      error: {
+        ...formValues.error,
+        [event.target.name]: errorText,
+      },
     });
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -28,20 +69,22 @@ export const FeedbackForm = () => {
       }),
     })
       .then(() => {
-        console.log("Form submission success");
-        // addToast('Форма успешно отправлена.', {
-        //   appearance: 'success',
-        //   autoDismiss: true
-        // });
+        setFormValues(initialState);
+        addToast("Форма успішно відправлена.", {
+          appearance: "success",
+          autoDismiss: true,
+        });
       })
       .catch((error) => {
-        // addToast(error, {
-        //   appearance: 'error',
-        //   autoDismiss: true
-        // });
+        addToast(error, {
+          appearance: "error",
+          autoDismiss: true,
+        });
         console.error("Form submission error:", error);
       });
   };
+
+  const isDisableSubmitButton = formValues.error && formValues.error.name || formValues.error.email;
 
   return (
     <div className={styles.feedbackForm} id="form">
@@ -60,13 +103,17 @@ export const FeedbackForm = () => {
             name="name"
             id="nameField"
             autoComplete="off"
+            onChange={onFieldChange}
             aria-required="true"
-            onChange={setValue}
+            value={formValues["name"]}
             className={styles.inputField}
           />
           <label className={styles.label} htmlFor="nameField">
             Прізвище та імя
           </label>
+          {formValues.error?.name && (
+            <p className={styles.errorText}>{formValues.error?.name}</p>
+          )}
         </div>
         <div className={styles.inputWrap}>
           <input
@@ -75,28 +122,42 @@ export const FeedbackForm = () => {
             name="email"
             id="emailField"
             autoComplete="off"
+            onChange={onFieldChange}
             aria-required="true"
-            onChange={setValue}
+            value={formValues["email"]}
             className={styles.inputField}
           />
           <label className={styles.label} htmlFor="emailField">
             E-mail
           </label>
+          {formValues.error?.email && (
+            <p className={styles.errorText}>{formValues.error?.email}</p>
+          )}
         </div>
         <div className={`${styles.inputWrap} ${styles.textareaWrap}`}>
           <textarea
             rows={4}
+            id="description"
             autoComplete="off"
             name="description"
-            id="description"
+            onChange={onFieldChange}
+            value={formValues["description"]}
             className={styles.textareaField}
-            onChange={setValue}
           />
           <label className={styles.label} htmlFor="description">
             Ваше повідомлення
           </label>
+          {formValues.error?.description && (
+            <p className={styles.errorText}>{formValues.error?.description}</p>
+          )}
         </div>
-        <button disabled={!Object.keys(formValues).length >= 1} className={styles.submitButton} type="submit">Відправити</button>
+        <button
+          disabled={isDisableSubmitButton}
+          className={styles.submitButton}
+          type="submit"
+        >
+          Відправити
+        </button>
       </form>
     </div>
   );

@@ -1,14 +1,15 @@
+import { Link } from "gatsby"
 import * as React from "react"
 
 import Seo from "../components/seo"
 
 const NotFoundPage = () => (
   <React.Fragment>
-    <h1>404: Not Found</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <h1>404: Сторінки не існує</h1>
+    <Link to="/">повернутись назад</Link>
   </React.Fragment>
 )
 
-export const Head = () => <Seo title="404: Not Found" />
+export const Head = () => <Seo title="Starting Help - 404: Not Found" />
 
 export default NotFoundPage

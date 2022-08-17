@@ -71,3 +71,7 @@
 .submitButton:disabled {
   background-color: rgb(71 127 181 / 50%);
 }
+.errorText {
+  color: tomato;
+  font-size: 12px;
+}
