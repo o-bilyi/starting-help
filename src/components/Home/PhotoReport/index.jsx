@@ -2,8 +2,30 @@ import React from "react";
 import { Carousel } from "../../Carousel";
 
 import * as styles from "./photoReport.module.css";
+import { useStaticQuery, graphql } from "gatsby";
 
 export const PhotoReport = () => {
+  const {allMarkdownRemark: {nodes}} = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark {
+        nodes {
+          frontmatter {
+            title
+            date(formatString: "DD.MM.YYYY")
+            photos {
+              img {
+                publicURL
+              }
+            }
+            listOfItems {
+              title
+            }
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <div className={styles.photoReport}>
       <div className={styles.widthContainer}>
@@ -14,7 +36,7 @@ export const PhotoReport = () => {
           Ipsum passages, and more recently with desktop publishing software
           like Aldus PageMaker including.
         </p>
-        <Carousel />
+        <Carousel items={nodes} />
       </div>
     </div>
   );
