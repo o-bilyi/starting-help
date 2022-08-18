@@ -1,0 +1,14 @@
+---
+title: Звіт за 18.08.2022
+date: 2022-08-18T08:18:45.063Z
+listOfItems:
+  - name: Допомога дитячому садку
+  - name: Допомога реабілітаційному центру
+  - name: Допомога переселенцям
+photos:
+  - img: image.jpg
+  - img: image-1.jpg
+  - img: image-2.jpg
+  - img: image-3.jpg
+  - img: image-4.jpg
+---
