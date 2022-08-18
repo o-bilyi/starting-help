@@ -10,10 +10,10 @@ collections:
     label: "Фото звіт"
     folder: "content/photoReports"
     create: true
-    slug: "{{day}}-{{month}}-{{year}}"
+    slug: "{{day}}-{{month}}-{{year}}-{{minute}}"
     media_folder: ""
     public_folder: ""
-    path: "{{title}}/index"
+    path: "{{day}}-{{month}}-{{year}}-{{minute}}/index"
     editor:
       preview: false
     fields:
