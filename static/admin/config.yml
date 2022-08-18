@@ -8,7 +8,7 @@ public_folder: /images
 collections:
   - name: "photoReport"
     label: "Фото звіт"
-    folder: "content/photoReport"
+    folder: "content/photoReports"
     create: true
     slug: "{{day}}-{{month}}-{{year}}"
     media_folder: ""
@@ -25,7 +25,7 @@ collections:
         fields:
           - {
               label: "Title",
-              name: "name",
+              name: "title",
               widget: "string",
               default: "Допомога ...",
             }
